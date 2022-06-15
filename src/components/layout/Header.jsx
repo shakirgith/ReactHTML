@@ -1,8 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+// import { useState, useEffect } from "react";
+// import { Modal, Button } from "react-bootstrap";
 
 function Header() {
   //   console.log("hello");
+
+  // const [show, setShow] = useState(false);
+
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+
   return (
     <>
       <div className="pre-header">
@@ -50,21 +59,13 @@ function Header() {
         </div>
       </div>
 
-      <header
-        className="header-area header-sticky wow slideInDown"
-        data-wow-duration="0.75s"
-        data-wow-delay="0s"
-      >
+      <header className="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <nav className="main-nav">
                 <Link to="/" className="logo">
-                  <img
-                    className="img-fluid"
-                    src={"assets/images/logo-v1.png"}
-                    alt="Logo"
-                  />
+                  <img className="img-fluid" src={"assets/images/logo-v1.png"} alt="Logo" />
                 </Link>
 
                 <ul className="nav">
@@ -89,19 +90,50 @@ function Header() {
                     </Link>
                   </li>
                   <li>
-                    <div class="border-first-button">
-                      <button class="btn btn-primary">Free Quote</button>
+                    <div className="border-first-button">
+                      <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Free Quote</button>
+                    
+
                     </div>
                   </li>
                 </ul>
-                <Link className="menu-trigger" to="/">
+               <button className="menu-trigger">
                   <span>Menu</span>
-                </Link>
+                </button>
+             
+               
               </nav>
             </div>
           </div>
         </div>
       </header>
+
+
+
+
+    <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div className="modal-body">
+            asdfasdfasd
+          </div>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" className="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+
+
+
+      
+
     </>
   );
 }

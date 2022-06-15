@@ -1,5 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import 'jquery/dist/jquery';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import { Carousel }  from 'react-bootstrap/Carousel';
+// import CarouselCaption from 'react-bootstrap/CarouselCaption';
+// import CarouselItem from 'react-bootstrap//CarouselItem';
 
 function Home() {
   return (
@@ -163,6 +170,7 @@ function Home() {
         </div>
       </div>
 
+
       <div className="container-fluid py-5">
         <div className="container">
           <div className="row align-items-center pb-1">
@@ -232,58 +240,7 @@ function Home() {
         </div>
       </div>
 
-      <div
-        class="main-banner wow fadeIn"
-        id="top"
-        data-wow-duration="1s"
-        data-wow-delay="0.5s"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="row">
-                <div class="col-lg-6 align-self-center">
-                  <div
-                    class="left-content show-up header-text wow fadeInLeft"
-                    data-wow-duration="1s"
-                    data-wow-delay="1s"
-                  >
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <h6>Digital Media Agency</h6>
-                        <h2>We Boost Your Website Traffic</h2>
-                        <p>
-                          This template is brought to you by TemplateMo website.
-                          Feel free to use this for a commercial purpose. You
-                          are not allowed to redistribute the template ZIP file
-                          on any other template website. Thank you.
-                        </p>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="border-first-button scroll-to-section">
-                          <Link to="/" href="#contact">
-                            Free Quote
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div
-                    class="right-image wow fadeInRight"
-                    data-wow-duration="1s"
-                    data-wow-delay="0.5s"
-                  >
-                    <img src="assets/images/slider-dec.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+     
       <div id="about" class="about section">
         <div class="container">
           <div class="row">
@@ -768,7 +725,7 @@ function Home() {
         </div>
       </div>
 
-      <div id="free-quote" class="free-quote">
+      <div id="free-quote" class="free-quote" style={{ backgroundImage: "url(assets/images/quote-bg.jpg)" }}>
         <div class="container">
           <div class="row">
             <div class="col-lg-4 offset-lg-4">
@@ -852,7 +809,8 @@ function Home() {
         >
           <div class="row">
             <div class="col-lg-12">
-              <div class="loop owl-carousel">
+            <OwlCarousel className='owl-theme' loop margin={10} nav>
+              {/* <div class="loop owl-carousel"> */}
                 <div class="item">
                   <Link to="/">
                     <div class="portfolio-item">
@@ -918,7 +876,9 @@ function Home() {
                     </div>
                   </Link>
                 </div>
-              </div>
+                </OwlCarousel>
+
+        
             </div>
           </div>
         </div>
@@ -1048,139 +1008,7 @@ function Home() {
         </div>
       </div>
 
-      <div id="contact" class="contact-us section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-              <div
-                class="section-heading wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.5s"
-              >
-                <h6>Contact Us</h6>
-                <h4>
-                  Get In Touch With Us <em>Now</em>
-                </h4>
-                <div class="line-dec"></div>
-              </div>
-            </div>
-            <div
-              class="col-lg-12 wow fadeInUp"
-              data-wow-duration="0.5s"
-              data-wow-delay="0.25s"
-            >
-              <form id="contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <div class="contact-dec">
-                      <img src="assets/images/contact-dec.png" alt="" />
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div id="map">
-                      {/* <iframe
-                        src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        width="100%"
-                        height="636px"
-                        frameborder="0"
-                        style="border:0"
-                        allowfullscreen
-                      ></iframe> */}
-                    </div>
-                  </div>
-                  <div class="col-lg-7">
-                    <div class="fill-form">
-                      <div class="row">
-                        <div class="col-lg-4">
-                          <div class="info-post">
-                            <div class="icon">
-                              <img src="assets/images/phone-icon.png" alt="" />
-                              <Link to="/">010-020-0340</Link>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="info-post">
-                            <div class="icon">
-                              <img src="assets/images/email-icon.png" alt="" />
-                              <Link to="/">our@email.com</Link>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-4">
-                          <div class="info-post">
-                            <div class="icon">
-                              <img
-                                src="assets/images/location-icon.png"
-                                alt=""
-                              />
-                              <Link to="/">123 Rio de Janeiro</Link>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <fieldset>
-                            <input
-                              type="name"
-                              name="name"
-                              id="name"
-                              placeholder="Name"
-                              autocomplete="on"
-                              required
-                            />
-                          </fieldset>
-                          <fieldset>
-                            <input
-                              type="text"
-                              name="email"
-                              id="email"
-                              pattern="[^ @]*@[^ @]*"
-                              placeholder="Your Email"
-                              required=""
-                            />
-                          </fieldset>
-                          <fieldset>
-                            <input
-                              type="subject"
-                              name="subject"
-                              id="subject"
-                              placeholder="Subject"
-                              autocomplete="on"
-                            />
-                          </fieldset>
-                        </div>
-                        <div class="col-lg-6">
-                          <fieldset>
-                            <textarea
-                              name="message"
-                              type="text"
-                              class="form-control"
-                              id="message"
-                              placeholder="Message"
-                              required=""
-                            ></textarea>
-                          </fieldset>
-                        </div>
-                        <div class="col-lg-12">
-                          <fieldset>
-                            <button
-                              type="submit"
-                              id="form-submit"
-                              class="main-button "
-                            >
-                              Send Message Now
-                            </button>
-                          </fieldset>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </>
   );
 }
