@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./sources/css/animated.css";
+// import './sources/css/wow.css';
+import "./sources/css/style.css";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  //  Link, NavLink,  Navigate, useParams, Outlet
+} from "react-router-dom";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import { webRoutes } from "./routes/web-routes";
 
 function App() {
+  const MyLinkPages = webRoutes.map((route, index) => (
+    <Route path={route.path} element={route.element} key={index} />
+  ));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>{MyLinkPages}</Routes>
+      </BrowserRouter>
+
+      <Footer />
+    </>
   );
 }
 
