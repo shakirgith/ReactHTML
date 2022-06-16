@@ -1,6 +1,7 @@
 import "./sources/css/animated.css";
 // import './sources/css/wow.css';
 import "./sources/css/style.css";
+// import "./sources/css/font-awesome.min.css";
 import {
   BrowserRouter,
   Routes,

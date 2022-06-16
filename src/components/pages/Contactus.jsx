@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 function ContactUs() {
   return (
     <>
@@ -12,7 +13,7 @@ function ContactUs() {
         <div class="container">
           <div class="row">
             <div class="col-lg-6 offset-lg-3">
-              <div
+              <div  
                 class="section-heading wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.5s"

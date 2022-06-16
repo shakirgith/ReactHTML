@@ -86,30 +86,18 @@ function Home() {
           </div>
         </div> */}
 
-        <div
-          className="app1-header bg"
-          style={{ backgroundImage: "url(assets/images/header-1-bg.png)" }}
-        >
-          <div
-            id="homeBanner"
-            className="main-banner wow fadeIn"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-          >
+        <div className="app1-header bg" style={{ backgroundImage: "url(assets/images/header-1-bg.png)" }}>
+          <div id="homeBanner" className="main-banner wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
+         
                   <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                      <div
-                        class="left-content show-up header-text wow fadeInLeft"
-                        data-wow-duration="1s"
-                        data-wow-delay="1s"
-                      >
-                        <div class="row">
-                          <div class="col-lg-12">
-                            <h6>Digital Media Agency</h6>
-                            <h2>We Boost Your Website Traffic</h2>
+                    <div class="col-lg-6 col-md-7">
+                    <div class="align-self-center">
+                      <div class="left-content show-up wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                       
+
+                            <h6>Welcome to Agency</h6>
+                            <h2>Get the Best ideas for your website</h2>
                             <p>
                               This template is brought to you by TemplateMo
                               website. Feel free to use this for a commercial
@@ -117,247 +105,230 @@ function Home() {
                               template ZIP file on any other template website.
                               Thank you.
                             </p>
-                          </div>
-                          <div class="col-lg-12">
-                            <div class="border-first-button scroll-to-section">
-                              <a href="#contact">Free Quote</a>
-                            </div>
-                          </div>
+                          
+                         
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
-                      {/* <div
-                        class="right-image wow fadeInRight"
-                        data-wow-duration="1s"
-                        data-wow-delay="0.5s"
-                      >
-                        <img src="assets/images/slider-dec.png" alt="" />
-                      </div> */}
-
+                   
                       <div class="rotate col-auto">
                         <div>
-                          <img
-                            alt=""
-                            class="img-fluid"
-                            src="/assets/images/preview_movie.png"
-                          />
+                          <img alt="" class="img-fluid" src="/assets/images/preview_movie.png" />
                         </div>
                       </div>
                       <div class="squares col">
-                        <img
-                          alt=""
-                          class="img-fluid img-1 set-abs"
-                          src="/assets/images/Ellipse.png"
-                        />
-                        <img
-                          alt=""
-                          class="img-fluid img-2 set-abs"
-                          src="/assets/images/Ellipse.png"
-                        />
+                        <img alt="" class="img-fluid img-1 set-abs" src="/assets/images/Ellipse.png" />
+                        <img alt="" class="img-fluid img-2 set-abs" src="/assets/images/Ellipse.png" />
                       </div>
                       <div class="animation-circle-inverse col-auto">
                         <i></i>
                         <i></i>
                         <i></i>
                       </div>
-                    </div>
+                   
                   </div>
-                </div>
-              </div>
+                
             </div>
           </div>
         </div>
       </div>
 
 
-      <div className="container-fluid py-5">
-        <div className="container">
-          <div className="row align-items-center pb-1">
-            <div className="col-lg-5">
-              <img
-                className="img-thumbnail p-3"
-                src={"assets/images/about.jpg"}
-                alt="About"
-              />
-            </div>
-            <div className="col-lg-7 mt-5 mt-lg-0">
-              <small className="bg-primary text-white text-uppercase font-weight-bold px-1">
-                Who We Are
-              </small>
-              <h1 className="mt-2 mb-4">
-                Most Effective Creative Service Provider For Companies
-              </h1>
-              <p className="mb-4">
-                Eirmod est dolor nonumy sea amet dolore erat sit dolor et dolor
-                vero. Tempor ipsum at justo amet at ipsum justo. Aiam kasd sea
-                sit dolor duo elitr dolor amet, justo est ipsum amet dolor ut
-                ipsum. Labore diam et nonumy amet dolores. Volup sit labore
-                dolores erat, magna justo sed lorem kasd ea dolor. Labore sit
-                clita invidunt, est dolores lorem sed ipsum kasd no amet ipsum.
-              </p>
-              {/* <a href="" className="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold">Read More</Link> */}
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-md-4">
-              <div
-                className="d-flex align-items-center border mb-4 mb-lg-0 p-4"
-                style={{ height: "120px" }}
-              >
-                <i className="fa fa-2x fa-map-marker-alt text-primary mr-3"></i>
-                <div className="d-flex flex-column">
-                  <h5 className="font-weight-bold">Our Office</h5>
-                  <p className="m-0">123 Street, New York, USA</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div
-                className="d-flex align-items-center border mb-4 mb-lg-0 p-4"
-                style={{ height: "120px" }}
-              >
-                <i className="fa fa-2x fa-envelope-open text-primary mr-3"></i>
-                <div className="d-flex flex-column">
-                  <h5 className="font-weight-bold">Email Us</h5>
-                  <p className="m-0">info@example.com</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div
-                className="d-flex align-items-center border mb-4 mb-lg-0 p-4"
-                style={{ height: "120px" }}
-              >
-                <i className="fas fa-2x fa-phone-alt text-primary mr-3"></i>
-                <div className="d-flex flex-column">
-                  <h5 className="font-weight-bold">Call Us</h5>
-                  <p className="m-0">+012 345 6789</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
      
-      <div id="about" class="about section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div
-                    class="about-left-image  wow fadeInLeft"
-                    data-wow-duration="1s"
-                    data-wow-delay="0.5s"
-                  >
-                    <img src="assets/images/about-dec.png" alt="" />
-                  </div>
-                </div>
-                <div
-                  class="col-lg-6 align-self-center  wow fadeInRight"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                >
-                  <div class="about-right-content">
-                    <div class="section-heading">
-                      <h6>About Us</h6>
-                      <h4>
-                        Who is DigiMedia <em>Agency</em>
-                      </h4>
+
+      <div id="welcome" className="container-fluid py-5 feature">
+        <div className="container">
+
+           <div className="row align-items-cente mt-5">
+              <div class="col-lg-12 text-center  wow fadeInDown mb-5" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <div class="section-heading align-items-center">
+                      <h6>Most Effective Creative</h6>
+                      <h4>Service Provider For <em>All Plateform</em></h4>
                       <div class="line-dec"></div>
                     </div>
                     <p>
-                      We hope this DigiMedia template is useful for your work.
-                      You can use this template for any purpose. You may
-                      <Link to="/" rel="nofollow" target="_blank">
-                        contribute a little amount
-                      </Link>
-                      via PayPal to
-                      <Link to="/" target="_blank">
-                        support TemplateMo
-                      </Link>
-                      in creating new templates regularly.
-                    </p>
-                    <div class="row">
-                      <div class="col-lg-4 col-sm-4">
-                        <div
-                          class="skill-item first-skill-item wow fadeIn"
-                          data-wow-duration="1s"
-                          data-wow-delay="0s"
-                        >
-                          <div class="progress" data-percentage="90">
-                            <span class="progress-left">
-                              <span class="progress-bar"></span>
-                            </span>
-                            <span class="progress-right">
-                              <span class="progress-bar"></span>
-                            </span>
-                            <div class="progress-value">
-                              <div>
-                                90%
-                                <br />
-                                <span>Coding</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-sm-4">
-                        <div
-                          class="skill-item second-skill-item wow fadeIn"
-                          data-wow-duration="1s"
-                          data-wow-delay="0s"
-                        >
-                          <div class="progress" data-percentage="80">
-                            <span class="progress-left">
-                              <span class="progress-bar"></span>
-                            </span>
-                            <span class="progress-right">
-                              <span class="progress-bar"></span>
-                            </span>
-                            <div class="progress-value">
-                              <div>
-                                80%
-                                <br />
-                                <span>Photoshop</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-4 col-sm-4">
-                        <div
-                          class="skill-item third-skill-item wow fadeIn"
-                          data-wow-duration="1s"
-                          data-wow-delay="0s"
-                        >
-                          <div class="progress" data-percentage="80">
-                            <span class="progress-left">
-                              <span class="progress-bar"></span>
-                            </span>
-                            <span class="progress-right">
-                              <span class="progress-bar"></span>
-                            </span>
-                            <div class="progress-value">
-                              <div>
-                                80%
-                                <br />
-                                <span>Animation</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    We hope this DigiMedia template is useful for your work. You can use this template for any purpose. You maycontribute a little amountvia PayPal tosupport TemplateMoin creating new templates regularly.
+                    </p> 
+              </div>
+            
+              
+              <div className="featurebox mb-5">
+              <div class="row g-5">
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="feature-item">
+                  <div className="ficon">
+                      <i class="fa fa-heartbeat feature-icon"></i>
+                  </div>
+                  <div>
+                    <h4>UI & UX Design</h4>
+                    <p>Consectetur adipiscing elit donec tempus
+                      pellentesque dui.</p>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="feature-item">
+                  <div className="ficon">
+                      <i class="fa fa-heartbeat feature-icon"></i>
+                  </div>
+                  <div>
+                    <h4>Graphics Design</h4>
+                    <p>Consectetur adipiscing elit donec tempus
+                      pellentesque dui.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="feature-item">
+                  <div className="ficon">
+                      <i class="fa fa-heartbeat feature-icon"></i>
+                  </div>
+                  <div>
+                    <h4>UI Development</h4>
+                    <p>Consectetur adipiscing elit donec tempus
+                      pellentesque dui.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="feature-item">
+                  <div className="ficon">
+                      <i class="fa fa-heartbeat feature-icon"></i>
+                  </div>
+                  <div>
+                    <h4>eCommerce Solutions</h4>
+                    <p>Consectetur adipiscing elit donec tempus
+                      pellentesque dui.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="feature-item">
+                  <div className="ficon">
+                      <i class="fa fa-heartbeat feature-icon"></i>
+                  </div>
+                  <div>
+                    <h4>Digital Marketing</h4>
+                    <p>Consectetur adipiscing elit donec tempus
+                      pellentesque dui.</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-lg-4 col-sm-6 col-12">
+                <div class="feature-item">
+                  <div className="ficon">
+                      <i class="fa fa-heartbeat feature-icon"></i>
+                  </div>
+                  <div>
+                    <h4>Support & Service</h4>
+                    <p>Consectetur adipiscing elit donec tempus
+                      pellentesque dui.</p>
+                  </div>
+                </div>
+              </div>
+
+              </div>
+
+
+              </div>
+          </div> 
+         
+
+
+
         </div>
       </div>
+      {/* Work Process
+
+RESEARCH
+Identify client requirement and review scope of work
+
+
+PLAN
+Sketching makes everything and work faster
+
+
+DESIGN
+A design concept is the idea behind a design
+
+
+DEVELOP
+Coding, processing implementation
+
+
+LAUNCH
+Testing, quality check, approvals */}
+
+{/* <div class="project-complate" style={{backgroundImage: "url(assets/images/quick-sol.png)"}}> */}
+<div class="project-complate">
+<div class="container">
+            <div class="row">
+               
+                <div class="col-lg-6 d-flex aos-init aos-animate" data-aos="">
+                  <div className="offers-container">
+                        <div class="section-heading">
+                          <h6>Work Process</h6>
+                          <h4>
+                          Advance <em>Features</em>
+                          </h4>
+                          <div class="line-dec"></div>
+                        </div>
+                        {/* <p>
+                          We hope this DigiMedia template is useful for your work.
+                          You can use this template for any purpose. You may
+                        </p> */}
+
+
+                        <ul>
+                          <li>
+                              <h5>Beautiful Interface Layout</h5>
+                              <p> We hope this DigiMedia template is useful for your work.
+                          You can use this template for any purpose. You may</p>
+                          </li>
+
+                          <li>
+                              <h5>Beautiful Interface Layout</h5>
+                              <p> We hope this DigiMedia template is useful for your work.
+                          You can use this template for any purpose. You may</p>
+                          </li>
+
+                          <li>
+                              <h5>Beautiful Interface Layout</h5>
+                              <p> We hope this DigiMedia template is useful for your work.
+                          You can use this template for any purpose. You may</p>
+                          </li>
+
+                          <li>
+                              <h5>Beautiful Interface Layout</h5>
+                              <p> We hope this DigiMedia template is useful for your work.
+                          You can use this template for any purpose. You may</p>
+                          </li>
+
+                        </ul>
+
+                    </div>
+
+                    
+                </div> 
+
+                <div class="col-lg-6 d-flex align-items-center aos-init aos-animate" data-aos="fade-right">
+                    <img class="img-fluid" src="assets/images/img.png" alt="work" />        
+                </div>
+
+            </div> 
+        </div>
+        </div>
+
+
 
       <div id="services" class="services section">
         <div class="container">
@@ -725,61 +696,62 @@ function Home() {
         </div>
       </div>
 
-      <div id="free-quote" class="free-quote" style={{ backgroundImage: "url(assets/images/quote-bg.jpg)" }}>
+      <div class="counters" style={{ backgroundImage: "url(assets/images/quote-bg-v3.jpg)" }}>
         <div class="container">
-          <div class="row">
-            <div class="col-lg-4 offset-lg-4">
-              <div
-                class="section-heading  wow fadeIn"
-                data-wow-duration="1s"
-                data-wow-delay="0.3s"
-              >
-                <h6>Get Your Free Quote</h6>
-                <h4>Grow With Us Now</h4>
-                <div class="line-dec"></div>
+              <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                  <h6>Success</h6>
+                  <h4>Happy Journey</h4>
+                  <div class="line-dec"></div>
               </div>
-            </div>
-            <div
-              class="col-lg-8 offset-lg-2  wow fadeIn"
-              data-wow-duration="1s"
-              data-wow-delay="0.8s"
-            >
-              <form id="search" action="#" method="GET">
-                <div class="row">
-                  <div class="col-lg-4 col-sm-4">
-                    <fieldset>
-                      <input
-                        type="web"
-                        name="web"
-                        class="website"
-                        placeholder="Your website URL..."
-                        autocomplete="on"
-                        required
-                      />
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-sm-4">
-                    <fieldset>
-                      <input
-                        type="address"
-                        name="address"
-                        class="email"
-                        placeholder="Email Address..."
-                        autocomplete="on"
-                        required
-                      />
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-4 col-sm-4">
-                    <fieldset>
-                      <button type="submit" class="main-button">
-                        Get Quote Now
-                      </button>
-                    </fieldset>
-                  </div>
+          <div class="row">
+            <div class="col-lg-12">
+                        
+
+
+                  
+              <div class="counter-list">
+                        <ul>
+                          <li>
+                              <div class="counter-text">
+                                <i class="fa fa-heartbeat feature-icon"></i>
+                                <h2 class="counts">306</h2>
+                                <h5 class="text-center">Years of Experience</h5>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="counter-text">
+                                <i class="fa fa-heartbeat feature-icon"></i>
+                                <h2 class="counts">306</h2>
+                                <h5 class="text-center">Project Finished</h5>
+                            </div>
+                          </li>
+                          
+                          <li>
+                            <div class="counter-text">
+                                <i class="fa fa-heartbeat feature-icon"></i>
+                                <h2 class="counts">306</h2>
+                                <h5 class="text-center">Happy Clients</h5>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="counter-text">
+                                <i class="fa fa-heartbeat feature-icon"></i>
+                                <h2 class="counts">306</h2>
+                                <h5 class="text-center">Team of Experts</h5>
+                            </div>
+                          </li>
+                        </ul>
+                    
+
                 </div>
-              </form>
+
+
+
+
             </div>
+
+
+           
           </div>
         </div>
       </div>
@@ -884,7 +856,7 @@ function Home() {
         </div>
       </div>
 
-      <div id="blog" class="blog">
+      {/* <div id="blog" class="blog">
         <div class="container">
           <div class="row">
             <div
@@ -1006,7 +978,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
      
     </>
