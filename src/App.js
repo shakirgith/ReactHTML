@@ -22,9 +22,10 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>{MyLinkPages}</Routes>
+        <Footer />
       </BrowserRouter>
 
-      <Footer />
+     
     </>
   );
 }

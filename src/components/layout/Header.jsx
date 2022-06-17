@@ -92,11 +92,11 @@ function Header() {
               <nav className="main-nav">
                 <Link to="/" className="logo">
                   <img className="img-fluid" src={"assets/images/logo-v1.png"} alt="Logo" />
-                </Link>
+                </Link> 
 
                 <ul className="nav">
                   <li>
-                    <Link activeClassName="active" to="/">
+                    <Link activeClassName="active" to="/">  
                       Home
                     </Link>
                   </li>
