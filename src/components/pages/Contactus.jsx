@@ -37,6 +37,12 @@ function ContactUs() {
     });
 
   }
+
+  function handleInput(e) {
+    console.log(e);
+    setValues((values) => ({ ...values, [e.target.name]: e.target.value }));
+  }
+
    
   useEffect(() => {
     if(status === 'SUCCESS') {
@@ -138,10 +144,10 @@ function ContactUs() {
                           <div className="col-lg-6">  
                           
                             <fieldset>
-                              <input type="name" name="name" id="name" placeholder="Name" />
+                              <input type="name" name="name" placeholder="Name" value={values.name} onChange={handleInput} required />
                             </fieldset>
                             <fieldset>
-                            <input type="email" className="form-control" placeholder="Email Address" name="email"/>
+                            <input type="email" className="form-control" pattern="[^ @]*@[^ @]*" placeholder="Email Address" name="email" value={values.email} onChange={handleInput}  required="" />
                               {/* <input
                                 type="text"
                                 name="email"
@@ -152,12 +158,12 @@ function ContactUs() {
                               /> */}
                             </fieldset>
                             <fieldset>
-                            <input type="text" className="form-control" placeholder="Subject" name="subject"/>
+                            <input type="text" className="form-control" placeholder="Subject" name="subject" value={values.subject} onChange={handleInput} required />
                             </fieldset>
                           </div>
                           <div className="col-lg-6">
                             <fieldset>
-                            <textarea className="form-control" cols="30" rows="8" placeholder="Your message" name="message"></textarea>
+                            <textarea className="form-control" cols="30" rows="8" placeholder="Your message" name="message" value={values.message} onChange={handleInput} ></textarea>
                             </fieldset>
                           </div>
                           <div className="col-lg-12">

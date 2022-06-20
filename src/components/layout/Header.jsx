@@ -1,15 +1,21 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 // import { Modal, Button } from "react-bootstrap";
 
 function Header() {
   //   console.log("hello");
+  const [isActive, setIsActive] = useState(false);
 
-  // const [show, setShow] = useState(false);
 
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  const handleClick = event => {
+    // 👇️ toggle isActive state on click
+    setIsActive(current => !current);
+
+  };
+
+
+
 
 
   return (
@@ -20,39 +26,19 @@ function Header() {
             <div className="col-lg-8 col-sm-8 col-7">
               <ul className="info">
                 <li>
-                  <Link to="mailto:digimedia@company.com" target="_blank">
+                  <a  href="mailto:digimedia@company.com">
                     <i class="fa fa-envelope"></i> digimedia@company.com
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link to="callto:010-020-0340">
+                  <a href="callto:010-020-0340">
                     <i class="fa fa-phone"></i> 010-020-0340
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
-            <div className="col-lg-4 col-sm-4 col-5">
-              <ul className="social-media">
-                {/* <li>
-                  <Link to="https://facebook.com/">
-                    <i class="fab fa-facebook"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://behance.com/">
-                    <i class="fab fa-behance"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://twitter.com/">
-                    <i class="fab fa-twitter"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://dribbble.com/">
-                    <i class="fab fa-dribbble"></i>
-                  </Link>
-                </li> */}
+            <div className="col-lg-4 col-sm-4 col-12">
+              <ul className="social-media"> 
                  <li>
                   <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
                       <i class="fa fa-facebook"></i>
@@ -93,27 +79,28 @@ function Header() {
                 <Link to="/" className="logo">
                   <img className="img-fluid" src={"assets/images/logo-v1.png"} alt="Logo" />
                 </Link> 
-
-                <ul className="nav">
+               
+              
+                <ul className={`nav mobile-menu ${isActive ? 'active' : ''}`}>
                   <li>
-                    <Link activeClassName="active" to="/">  
+                    <NavLink activeClassName="active" to="/">  
                       Home
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link activeClassName="active" to="/services">
+                    <NavLink activeClassName="active"  to="/services">
                       Services
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link activeClassName="active" to="/aboutus">
+                    <NavLink activeClassName="active"   to="/aboutus">
                       About Us
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
-                    <Link activeClassName="active" to="/contactus">
+                    <NavLink activeClassName="active"  to="/contactus">
                       Contact Us
-                    </Link>
+                    </NavLink>
                   </li>
                   <li>
                     <div className="border-first-button">
@@ -122,11 +109,13 @@ function Header() {
 
                     </div>
                   </li>
+
+                 
                 </ul>
-               <button className="menu-trigger">
+                <button className={`menu-trigger ${isActive ? 'active' : ''}`} onClick={handleClick}>
                   <span>Menu</span>
                 </button>
-             
+
                
               </nav>
             </div>

@@ -8,13 +8,16 @@ import {
   Route,
   //  Link, NavLink,  Navigate, useParams, Outlet
 } from "react-router-dom";
+import { useState } from "react";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import { webRoutes } from "./routes/web-routes";
 
 function App() {
+
+
   const MyLinkPages = webRoutes.map((route, index) => (
-    <Route path={route.path} element={route.element} key={index} />
+    <Route exact path={route.path} element={route.element} key={index} />
   ));
 
   return (
