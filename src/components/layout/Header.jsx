@@ -5,16 +5,15 @@ import { useState } from "react";
 
 function Header() {
   //   console.log("hello");
+  // const [isMobile, setIsMobile] = useState(false);
+
   const [isActive, setIsActive] = useState(false);
 
 
   const handleClick = event => {
-    // 👇️ toggle isActive state on click
     setIsActive(current => !current);
 
   };
-
-
 
 
 
@@ -81,7 +80,7 @@ function Header() {
                 </Link> 
                
               
-                <ul className={`nav mobile-menu ${isActive ? 'active' : ''}`}>
+                <ul className={`nav mobile-menu ${isActive ? 'active' : ''}`}> 
                   <li>
                     <NavLink activeClassName="active" to="/">  
                       Home
@@ -101,7 +100,7 @@ function Header() {
                     <NavLink activeClassName="active"  to="/contactus">
                       Contact Us
                     </NavLink>
-                  </li>
+                  </li> 
                   <li>
                     <div className="border-first-button">
                       <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Free Quote</button>
@@ -116,7 +115,6 @@ function Header() {
                   <span>Menu</span>
                 </button>
 
-               
               </nav>
             </div>
           </div>

@@ -2,9 +2,12 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { useState, useEffect } from "react";
+import { MetaDescription, MetaTitle } from '../GeneralFunction';
 
 
 function ContactUs() {
+  MetaTitle('Cotact Us Page Title')
+  MetaDescription('Contact form Page')
 
   const [values, setValues] = useState({
     name: '',

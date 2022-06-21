@@ -3,12 +3,20 @@ import { Link, NavLink } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useState, useEffect } from "react";
 
+
+
+
+
 function Footer() {
+
+
   const [values, setValues] = useState({
     name: "",
     email: "",
   });
   const [status, setStatus] = useState("");
+
+
 
   const SubscribeForm = useRef();
   console.log("SubscribeForm");
@@ -54,6 +62,9 @@ function Footer() {
 
   return (
     <>
+
+
+
       <div
         id="free-quote"
         className="free-quote"
@@ -238,20 +249,16 @@ function Footer() {
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
-            <div className="modal -header">
+            <div className="modal-header">
               <h5 className="modal-title">
                 GET YOUR FREE QUOTE <br />
                 Grow With Us Now
               </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              
+            </div>  
             <div className="modal-body">
-              <form id="contact" action="" method="post">
+              <form >
                 {/* <div className="col-lg-12">
                     <div className="contact-dec">
                       <img src="assets/images/contact-dec.png" alt="" />
@@ -262,7 +269,7 @@ function Footer() {
                    
                   </div> */}
 
-                <div className="fill-form">
+                <div id="contact" className="fill-form overflow-hidden">
                   <div className="row">
                     <div className="col-lg-12">
                       <fieldset>
@@ -295,7 +302,7 @@ function Footer() {
                         />
                       </fieldset>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-12">
                       <fieldset>
                         <textarea
                           name="message"
@@ -322,12 +329,7 @@ function Footer() {
                 </div>
               </form>
             </div>
-            <div className="modal-footer">
-              {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
-              <button type="button" className="btn btn-primary">
-                Save changes
-              </button>
-            </div>
+           
           </div>
         </div>
       </div>
