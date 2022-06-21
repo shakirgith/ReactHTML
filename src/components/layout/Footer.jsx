@@ -18,8 +18,11 @@ function Footer() {
 
 
 
+
+
+
   const SubscribeForm = useRef();
-  console.log("SubscribeForm");
+  //console.log("SubscribeForm");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -39,6 +42,9 @@ function Footer() {
             email: "",
           });
           setStatus("SUCCESS");
+            // setTimeout(() => {
+            // setStatus("");
+            // }, 3000);
         },
         (error) => {
           // console.log(error.text);
@@ -52,13 +58,9 @@ function Footer() {
     setValues((values) => ({ ...values, [e.target.name]: e.target.value }));
   }
 
-  useEffect(() => {
-    if (status === "SUCCESS") {
-      setTimeout(() => {
-        setStatus("");
-      }, 3000);
-    }
-  }, [status]);
+
+
+
 
   return (
     <>
@@ -110,6 +112,7 @@ function Footer() {
             </div>
           </div>
         </div>
+        <img className="homerightelemt" src="/assets/images/dot-circle-element-black.png" />
       </div>
 
       <footer style={{ backgroundImage: "url(assets/images/quote-bg-v3.jpg)" }}>

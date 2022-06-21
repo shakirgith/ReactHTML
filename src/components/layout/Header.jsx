@@ -1,11 +1,13 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
-// import { Modal, Button } from "react-bootstrap";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { MetaDescription, MetaTitle } from "../GeneralFunction";
 
 function Header() {
   //   console.log("hello");
   // const [isMobile, setIsMobile] = useState(false);
+
+  const {pathname} = useLocation();
 
   const [isActive, setIsActive] = useState(false);
 
@@ -15,6 +17,25 @@ function Header() {
 
   };
 
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+    //console.log(pathname)
+
+    MetaTitle( 
+      pathname === '/' ? 'Home Page Title' : 
+     pathname === '/aboutus' ? 'About New Page Title' :
+     pathname === '/contactus' ? 'Contact us New Page Title' :
+     pathname === '/services' ? 'Servies us New Page Title' : 
+     'Unknown Title' );
+    MetaDescription(
+     pathname === '/' ? 'Home Page Description' : 
+    pathname === '/aboutus' ? 'About New Page Description' : 
+    pathname === '/services' ? 'Services New Page Description' : 
+    pathname === '/contactus' ? 'Contactus New Page Description' :  
+    'Unknown Description');
+
+  }, [pathname])
 
 
   return (
@@ -81,22 +102,22 @@ function Header() {
                
               
                 <ul className={`nav mobile-menu ${isActive ? 'active' : ''}`}> 
-                  <li>
+                  <li onClick={()=> setIsActive(!isActive)}>
                     <NavLink activeClassName="active" to="/">  
                       Home
                     </NavLink>
                   </li>
-                  <li>
+                  <li onClick={()=> setIsActive(!isActive)}>
                     <NavLink activeClassName="active"  to="/services">
                       Services
                     </NavLink>
                   </li>
-                  <li>
+                  <li onClick={()=> setIsActive(!isActive)}>
                     <NavLink activeClassName="active"   to="/aboutus">
                       About Us
                     </NavLink>
                   </li>
-                  <li>
+                  <li onClick={()=> setIsActive(!isActive)}>
                     <NavLink activeClassName="active"  to="/contactus">
                       Contact Us
                     </NavLink>

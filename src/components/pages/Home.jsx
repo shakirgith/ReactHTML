@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import { MetaDescription, MetaTitle } from "../GeneralFunction";
+
 // import { Carousel }  from 'react-bootstrap/Carousel';
 // import CarouselCaption from 'react-bootstrap/CarouselCaption';
 // import CarouselItem from 'react-bootstrap//CarouselItem';
 
 function Home() {
-  MetaTitle('Home Page Title');
-  MetaDescription('Home page description');
+
+
   return (
     <>
       <div>
@@ -177,6 +177,8 @@ function Home() {
 
 
         </div>
+        <img className="homerightelemt" src="/assets/images/line.jpg" />
+        <img className="homeleftelemt" src="/assets/images/slider-right-dec.jpg" />
       </div>
      
 <div className="project-complate">
@@ -768,6 +770,10 @@ function Home() {
             </div>
           </div>
         </div>
+
+                     
+
+
       </div>
 
       {/* <div id="blog" className="blog">

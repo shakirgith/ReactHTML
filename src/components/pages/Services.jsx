@@ -1,9 +1,8 @@
 import React from "react";
-import { MetaDescription, MetaTitle } from "../GeneralFunction";
+
 
 function Services() {
-  MetaTitle('Services Page')
-  MetaDescription('Services Page description')
+
   return (
     <>
           <div className="innerbanner">

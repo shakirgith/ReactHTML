@@ -1,10 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { MetaDescription, MetaTitle } from "../GeneralFunction";
+
 
 function AboutUs() {
-  MetaTitle('About Page Title');
-  MetaDescription('About us Page description')
+
 
   
   const [show, setShow] = useState(false);

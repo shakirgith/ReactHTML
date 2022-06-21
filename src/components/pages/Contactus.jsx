@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { useState, useEffect } from "react";
-import { MetaDescription, MetaTitle } from '../GeneralFunction';
+// import { MetaDescription, MetaTitle } from '../GeneralFunction';
 
 
 function ContactUs() {
-  MetaTitle('Cotact Us Page Title')
-  MetaDescription('Contact form Page')
+  // MetaTitle('Cotact Us Page Title')
+  // MetaDescription('Contact form Page')
 
   const [values, setValues] = useState({
     name: '',
@@ -34,6 +34,9 @@ function ContactUs() {
           message: ''
         });
         setStatus('SUCCESS');
+          // setTimeout(() => {
+          // setStatus('');
+          // }, 3000);
     }, (error) => {
         // console.log(error.text);
         console.log('FAILED...', error);
@@ -47,13 +50,7 @@ function ContactUs() {
   }
 
    
-  useEffect(() => {
-    if(status === 'SUCCESS') {
-      setTimeout(() => {
-        setStatus('');
-      }, 3000);
-    }
-  }, [status]);
+
 
 
   return (
@@ -93,7 +90,7 @@ function ContactUs() {
                     <div className="contact-dec">
                       <img src="assets/images/contact-dec.png" alt="" />
                     </div>
-                  </div>
+                  </div>  
                   <div className="col-lg-5">
                     <img src="assets/images/about.jpg" alt="" />
                     {/* <div id="map">
