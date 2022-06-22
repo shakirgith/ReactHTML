@@ -118,6 +118,11 @@ function Header() {
                     </NavLink>
                   </li>
                   <li onClick={()=> setIsActive(!isActive)}>
+                    <NavLink activeClassName="active"   to="/gallery">
+                      Gallery
+                    </NavLink>
+                  </li>
+                  <li onClick={()=> setIsActive(!isActive)}>
                     <NavLink activeClassName="active"  to="/contactus">
                       Contact Us
                     </NavLink>
