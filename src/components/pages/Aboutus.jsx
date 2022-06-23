@@ -1,10 +1,13 @@
 import React from 'react'
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // import CountrySelector from '../SelectConteries';
 import axios from 'axios';
+import  { Component } from 'react'
 
+class AboutUs extends Component {
+ 
 
-function AboutUs() {
+// class AboutUs extends React.Component {
 
   // const [file, setFile] = useState();
   //   function handleChange(e) {
@@ -18,31 +21,31 @@ function AboutUs() {
 
 
 
-const [userRegistration, setUserRegistration] = useState({
+// const [userRegistration, setUserRegistration] = useState({
     
-    username: "",
-    email: "",
-    phone: "",
-    password: ""
-});
+//     username: "",
+//     email: "",
+//     phone: "",
+//     password: ""
+// });
 
-const [records, setRecords] = useState([]);
+// const [records, setRecords] = useState([]);
 
-const handleInput = (e) =>  {
-const name = e.target.name;
-const value = e.target.value;
-console.log(name);
+// const handleInput = (e) =>  {
+// const name = e.target.name;
+// const value = e.target.value;
+// console.log(name);
 
-setUserRegistration ({ ...userRegistration, [name]: value });
-
-
-
-}
+// setUserRegistration ({ ...userRegistration, [name]: value });
 
 
 
-const handleSubmit = (e) => {
-e.preventDefault();
+// }
+
+
+
+// const handleSubmit = (e) => {
+// e.preventDefault();
     
 //     const value = e.target.value; 
 //  if this.value = e.target.value(0) {
@@ -60,21 +63,67 @@ e.preventDefault();
 
 
     
-}   
+// }   
 
 
   // start local host api and save image on local path storage 
-    const [user, setUser] = useState([]);
-    const loadUsers =  async  () => {
-    const result = await  axios.post("http://localhost/ReactApi/view.php");
-    setUser(result.data.phpresult);
-    console.log(result.data.phpresult);
+    // const [user, setUser] = useState([]);
+    // const loadUsers =  async  () => {
+    // const result = await  axios.post("http://172.16.20.84/ReactJS/my-react-app/public/backend/php/connection.php");
+    // setUser(result.data.result);
+    // console.log(result.data.result);
 
-    };
+    // };
 
-    useEffect(() => {
-    loadUsers();
-    }, []);
+     
+
+  state = {
+    username: '',
+    email: '',
+    phone: '',
+    password: '',
+    mydataform: []
+  }
+
+  componentDidMount() {
+    const url = 'http://172.16.20.84/ReactJS/my-react-app/public/backend/php/connection.php'
+    axios.get(url).then(response => response.data)
+    .then((data) => { 
+     // console.log(data)
+      this.setState({ mydataform: data })
+      console.log(this.state.mydataform)
+     })
+  }
+ 
+  handleFormSubmit( event ) {
+      event.preventDefault();
+ 
+      let formData = new FormData();
+       formData.append('username', this.state.username)
+      formData.append('email', this.state.email)
+      formData.append('phone', this.state.phone)
+      formData.append('password', this.state.password)
+ 
+      axios({
+          method: 'post',
+          url: 'http://172.16.20.84/ReactJS/my-react-app/public/backend/php/connection.php',
+          data: formData,
+          config: { headers: {'Content-Type': 'multipart/form-data' }}
+      })
+      .then(function (response) {
+          console.log(response)
+          alert('New Data Successfully Added.');  
+      })
+      .catch(function (response) {
+          console.log(response)
+      });
+  }
+
+
+
+    // useEffect(() => {
+    // loadUsers();
+    // }, []);
 
 
 
@@ -90,7 +139,7 @@ e.preventDefault();
   // const [show, setShow] = useState(false);
   // const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
-
+  render() {
   return (
     <>
       <div className="innerbanner">
@@ -120,7 +169,7 @@ e.preventDefault();
                 </thead>
     
                 <tbody> 
-                    {user.map((res) => 
+                    {this.state.mydataform.map((res) => 
                     <tr>
                     <th scope="row">{res.username}</th>
                     <td>{res.email}</td>
@@ -130,7 +179,14 @@ e.preventDefault();
     
                      )}
     
-    
+              {/* {this.state.mydataform.map((contact, index) => (
+                  <tr key={index}>
+                      <th scope="row">{ contact.username }</th>
+                      <td>{ contact.email }</td>
+                      <td>{ contact.phone }</td>
+                      <td>{ contact.password }</td>
+                  </tr>
+                  ))} */}
     
                 </tbody>
                 </table> 
@@ -142,7 +198,7 @@ e.preventDefault();
         </div>
       
 
-      <form action="" autoComplete="off" onSubmit={handleSubmit}>
+      <form>
                 {/* <div className="col-lg-12">
                     <div className="contact-dec">
                       <img src="assets/images/contact-dec.png" alt="" />
@@ -157,12 +213,12 @@ e.preventDefault();
                   <div className="row">
                   <div className="col-lg-6 col-sm-6 col-12">
                         <fieldset>
-                          <input type="text" value={userRegistration.username} onChange={handleInput} name="username" placeholder='username' />
+                          <input type="text" value={this.state.username} onChange={e => this.setState({ username: e.target.value })}  name="username" placeholder='username' />
                         </fieldset>
                   </div>
                   <div className="col-lg-6 col-sm-6 col-12">
                   <fieldset>
-                  <input type="email" value={userRegistration.email} onChange={handleInput}  pattern="[^ @]*@[^ @]*" name="email" placeholder='email'  />
+                  <input type="email" value={this.state.email} onChange={e => this.setState({ email: e.target.value })}  pattern="[^ @]*@[^ @]*" name="email" placeholder='email'  />
                         {/* <input
                           type="text"
                           name="email"
@@ -176,7 +232,7 @@ e.preventDefault();
                     <div className="col-lg-6 col-sm-6 col-12">
     
                       <fieldset>
-                      <input type="text" value={userRegistration.phone} onChange={handleInput} name="phone" placeholder='phone'  />
+                      <input type="text" name="phone" placeholder='phone' value={this.state.phone} onChange={e => this.setState({ phone: e.target.value })}  />
                         {/* <input
                           type="subject"
                           name="text"
@@ -193,7 +249,7 @@ e.preventDefault();
                     <div className="col-lg-6 col-sm-6 col-12">
     
                       <fieldset>
-                      <input type="text" value={userRegistration.password} onChange={handleInput} name="password" placeholder='password'  />
+                      <input type="text" name="password" placeholder='password' value={this.state.password} onChange={e => this.setState({ password: e.target.value })}  />
                         {/* <input
                           type="subject"
                           name="text"
@@ -250,13 +306,9 @@ e.preventDefault();
 
                     <div className="col-lg-12">
                       <fieldset>
-                        <button name="submit"
-                          type="submit"
-                          id="form-submit"
-                          className="main-button"
-                        >
-                          Send Message Now
-                        </button>
+                        <button type="submit"  className="main-button" onClick={e => this.handleFormSubmit(e)}>Send Message Now</button>
+                          
+                       
                       </fieldset>
                     </div>
                   </div>
@@ -275,5 +327,5 @@ e.preventDefault();
     </>
   );
 }
-
+}
 export default AboutUs;

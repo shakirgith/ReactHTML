@@ -1,9 +1,10 @@
 import React from 'react'
 import axios from 'axios';
+import swal from 'sweetalert';
  
 class ImageGallary extends React.Component{
  
-        UPLOAD_ENDPOINT = 'http://localhost/ReactJS/my-react-app/public/php/upload.php';
+        UPLOAD_ENDPOINT = 'http://172.16.20.84/ReactJS/my-react-app/public/backend/php/uploadFile.php';
         constructor(props) {
             super(props);
             this.state ={
@@ -17,20 +18,35 @@ class ImageGallary extends React.Component{
             e.preventDefault() 
             let res = await this.uploadFile(this.state.file);
             console.log(res.data);
+            swal("Successfully Upload");
+            swal({
+                title: "Upload",
+                text: "Successfully",
+                icon: "success",
+                dangerMode: true,
+              })
         }
         onChange(e) {
             this.setState({file:e.target.files[0]})
         }
         async uploadFile(file){
+            
+    
             const formData = new FormData();
+            
             formData.append('avatar',file)
+            
             return  await axios.post(this.UPLOAD_ENDPOINT, formData,{
                 headers: {
                     'content-type': 'multipart/form-data'
                 }
             });
-        }
-    
+          }
+        
+
+
+
+
  
     render(){
         return(
